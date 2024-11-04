@@ -9,7 +9,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "start": "node build/index.js",
-    "pub": " npm version patch --force && npm publish --access public"
+    "pub": "npm run build && npm version patch --force && npm publish --access public"
   },
   "files": [
     "build/",
