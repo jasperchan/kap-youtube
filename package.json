@@ -1,5 +1,5 @@
 {
-  "name": "@jasperchan/kap-youtube",
+  "name": "kap-youtube-oauth",
   "version": "0.0.1",
   "description": "Upload to YouTube",
   "repository": "jasperchan/kap-youtube",
