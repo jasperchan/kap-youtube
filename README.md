@@ -15,3 +15,5 @@ In the editor, after recording, select `MP4`, and then `Upload to YouTube`.
 Using this plugin requires a Desktop OAuth 2.0 Client (https://console.cloud.google.com/apis/credentials). The YouTube API additionally notes:
 
 > All videos uploaded via the videos.insert endpoint from unverified API projects created after 28 July 2020 will be restricted to private viewing mode. To lift this restriction, each API project must undergo an audit to verify compliance with the Terms of Service. Please see the API Revision History for more details.
+
+Also, by default, projects have a 10,000 / user token quota and a single insert costs 1,600 tokens (https://developers.google.com/youtube/v3/determine_quota_cost) so you're limited to 6 uploads / day.
