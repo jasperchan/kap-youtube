@@ -1,6 +1,6 @@
 {
   "name": "kap-youtube-oauth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Upload to YouTube",
   "repository": "jasperchan/kap-youtube-oauth",
   "main": "./build/index.js",
