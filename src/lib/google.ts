@@ -31,15 +31,17 @@ export async function authorize(options: {
     discardDescriptor: true,
     postfix: ".json",
   });
-  fs.writeFileSync(keyFilePath.name, JSON.stringify(options.client));
-  const client = await authenticate({
-    scopes: options.scopes,
-    keyfilePath: keyFilePath.name,
-  });
-  keyFilePath.removeCallback();
-  if (client.credentials) {
-    console.log(client.credentials);
-    await options.save(client.credentials);
+  try {
+    fs.writeFileSync(keyFilePath.name, JSON.stringify(options.client));
+    const client = await authenticate({
+      scopes: options.scopes,
+      keyfilePath: keyFilePath.name,
+    });
+    if (client.credentials) {
+      await options.save(client.credentials);
+    }
+    return client;
+  } finally {
+    keyFilePath.removeCallback();
   }
-  return client;
 }
